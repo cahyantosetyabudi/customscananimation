@@ -13,6 +13,8 @@
 		79D4C181248398BD00C802CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D4C17F248398BD00C802CC /* Main.storyboard */; };
 		79D4C183248398C100C802CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D4C182248398C100C802CC /* Assets.xcassets */; };
 		79D4C186248398C100C802CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D4C184248398C100C802CC /* LaunchScreen.storyboard */; };
+		79D4C18E2483AA2800C802CC /* ViewFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4C18D2483AA2800C802CC /* ViewFinder.swift */; };
+		79D4C1902483AA3600C802CC /* ViewFinder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D4C18F2483AA3600C802CC /* ViewFinder.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		79D4C182248398C100C802CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79D4C185248398C100C802CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79D4C187248398C100C802CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79D4C18D2483AA2800C802CC /* ViewFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFinder.swift; sourceTree = "<group>"; };
+		79D4C18F2483AA3600C802CC /* ViewFinder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewFinder.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				79D4C182248398C100C802CC /* Assets.xcassets */,
 				79D4C184248398C100C802CC /* LaunchScreen.storyboard */,
 				79D4C187248398C100C802CC /* Info.plist */,
+				79D4C18D2483AA2800C802CC /* ViewFinder.swift */,
+				79D4C18F2483AA3600C802CC /* ViewFinder.xib */,
 			);
 			path = SampleBlinkIDScanner;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				79D4C186248398C100C802CC /* LaunchScreen.storyboard in Resources */,
 				79D4C183248398C100C802CC /* Assets.xcassets in Resources */,
+				79D4C1902483AA3600C802CC /* ViewFinder.xib in Resources */,
 				79D4C181248398BD00C802CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				79D4C17E248398BD00C802CC /* ViewController.swift in Sources */,
 				79D4C17A248398BD00C802CC /* AppDelegate.swift in Sources */,
+				79D4C18E2483AA2800C802CC /* ViewFinder.swift in Sources */,
 				79D4C17C248398BD00C802CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

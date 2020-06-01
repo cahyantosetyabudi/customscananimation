@@ -10,11 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var containerView: ViewFinder!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)        
+    }
+    
+    @IBAction func startAnimation(_ sender: UIButton) {
+        containerView.startScanLineAnimation()
+    }
+    
+    @IBAction func startFlipAnimation(_ sender: UIButton) {
+        containerView.startFlipAnimation()
+    }
+    
 }
 

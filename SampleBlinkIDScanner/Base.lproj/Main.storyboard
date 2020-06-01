@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,51 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleBlinkIDScanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIE-vr-rSe" customClass="ViewFinder" customModule="SampleBlinkIDScanner" customModuleProvider="target">
+                                <rect key="frame" x="40" y="281" width="334" height="334"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="334" id="wzT-76-kEW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW1-S5-XW4">
+                                <rect key="frame" x="153.5" y="639" width="107" height="30"/>
+                                <state key="normal" title="Start Animation"/>
+                                <connections>
+                                    <action selector="startAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HlM-8x-ZdX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-C1-rzP">
+                                <rect key="frame" x="139.5" y="685" width="135" height="30"/>
+                                <state key="normal" title="Start Animation Flip"/>
+                                <connections>
+                                    <action selector="startFlipAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwr-i1-Pci"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XIE-vr-rSe" secondAttribute="trailing" constant="40" id="2uf-jU-QH2"/>
+                            <constraint firstItem="oW1-S5-XW4" firstAttribute="top" secondItem="XIE-vr-rSe" secondAttribute="bottom" constant="24" id="DIn-Vi-MLk"/>
+                            <constraint firstItem="oW1-S5-XW4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fpn-MA-AQN"/>
+                            <constraint firstItem="XIE-vr-rSe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iZJ-ZN-eSk"/>
+                            <constraint firstItem="rbB-C1-rzP" firstAttribute="top" secondItem="oW1-S5-XW4" secondAttribute="bottom" constant="16" id="jcu-Mf-sZl"/>
+                            <constraint firstItem="rbB-C1-rzP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mJs-Yb-mt4"/>
+                            <constraint firstItem="XIE-vr-rSe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="wze-OM-iUj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="XIE-vr-rSe" id="FCe-Ab-gDx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="138"/>
         </scene>
     </scenes>
 </document>
